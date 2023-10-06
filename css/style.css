@@ -1,11 +1,13 @@
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
+
     .footer{
         position: fixed;
         left: 0;
         bottom: 0;
         width: 100%;
         background-color: #A4C6E2;
+        z-index: 1000;
     }
     .footer img{
         padding: 5px 20px 5px 17px ;
@@ -26,12 +28,15 @@
         padding: 0;
     }
     .Content{
-        background-color: #FCFFF1;
+        background-color: #fffff1;
         min-height: 100vh;
         overflow: hidden;
     }
     .HomeFeed{
         display: block;
+        padding-bottom: 69px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
     .UserAva{
         position: absolute;
@@ -75,5 +80,84 @@
     .SponsorBar button:active{
         background-color: #accce3;
     }
+    /* Timer style start */
+    .TimerBar{
+        
+        display: table;
+        width: 92%;
+        background-color: #71efc1c9;
+        justify-content: center;
+        padding: 10px;
+        margin-left: 6px;
+        border-radius: 10px;
+        align-items: center;
+        /* height: 55px; */
+
+    }
+    #Timer div {
+        display: inline-block;
+        min-width: 50px;
+      }
+    #Timer div span {
+    /* color: #B1CDF1; */
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    }
+    /* Timer style end */
+
+    .SmallProgressSection{
+        display: flex;
+    }
+
+    .SmallProgressBar{
+        width: 92%;
+        background-color: #71efc1c9;
+        justify-content: center;
+        padding: 10px;
+        margin-left: 6px;
+        border-radius: 10px;
+        align-items: center;
+        width: 40%;
+        margin: 5px;
+
+    }
+    .CigsTakenSection{
+        display: grid;
+        width: 92%;
+        
+        /* grid-row: 2; */
+    }
+    .CigsTakenSection img{
+        margin-top: 5px;
+        height: 30px;
+    }
+    .CigsTaken{
+        display: flex;
+        width: 100%;
+        background-color: #f78282;
+        justify-content: space-between;
+
+        padding: 10px;
+        margin-left: 6px;
+        border-radius: 10px;
+        align-items: center;
+
+    }
+    .CigsTaken h2{
+        padding-left: 100px;
+    }
+    .TakeCigButton{
+        border: none;
+        background-color: #00214c;
+        color: white;
+        border-radius: 10px;
+        padding: 5px 10px;
+        margin-top: 5px;
+    }
+    .TakeCigButton:active{
+        background-color: #a80000;
+    }
+
 
   }

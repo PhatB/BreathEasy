@@ -1,0 +1,516 @@
+/***************homepage start*************/
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F3A58;
+}
+a {
+    text-decoration: none;
+}
+
+
+img.logo {
+    cursor: pointer;
+}
+
+.logo {
+    cursor: pointer;
+    transition: opacity 0.5s ease; 
+    opacity: 1; 
+}
+
+.fade-out {
+    opacity: 0; 
+}
+
+
+h1 {
+    color: white; 
+}
+
+.icons {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.icons a {
+    margin: 10px 0;
+}
+
+/***************homepage end*************/
+
+
+/***************startpage start*************/
+body.start {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F3A58;
+}
+
+.start .content {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.start .text {
+    font-size: 80px; 
+    font-weight: bold;
+    margin-bottom: 300px;
+    color: white
+}
+
+.start .centered-button {
+    background-color: #F5F2E8;
+    color: black;
+    border: none;
+    padding: 20px 100px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.start .centered-button:hover {
+    background-color: yellow;
+}
+
+
+.article-text {
+    font-size: 18px;
+    margin-bottom: 50px;
+    max-width: 900px; 
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+    text-align: justify;
+    color: white;
+    transition: opacity 1s ease-in-out; 
+}
+
+
+
+.start .continue-btn {
+    background-color: #F5F2E8;
+    color: black;
+    border: none;
+    padding: 20px 300px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.continue-btn:hover {
+    background-color: yellow;
+}
+
+@media only screen and (max-width: 480px) {
+    .start .text {
+        font-size: 32px; 
+        margin-bottom: 100px;
+    }
+
+    .start .centered-button {
+        padding: 8px 40px;
+        font-size: 12px;
+    }
+
+    .article-text {
+        font-size: 14px;
+        margin-bottom: 20px;
+        max-width: 100%; 
+    }
+
+    .start .continue-btn {
+        padding: 8px 100px;
+        font-size: 12px;
+    }
+}
+/***************startpage end*************/
+
+
+/***************profile start*************/
+
+.profile h2{
+    font-size: 36px;
+    color: white;
+}
+
+.profile label{
+    font-size: 20px;
+    color: white;
+}
+
+.profile p{
+    color: white;
+    font-size: 28px;
+
+}
+
+.profile input[type="text"] {
+    width: 400px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+.profile input[type="date"] {
+    width: 200px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.profile input[type="number"] {
+    width: 200px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.profile select {
+    width: 200px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.sponsor {
+    width: 200px;         
+    height: 50px;          
+    font-size: 20px;       
+    padding: 10px 20px;    
+    border-radius: 10px;   
+    cursor: pointer;       
+}
+
+button.sponsor:hover {
+    background-color:yellow;
+}
+
+
+/***************profile end*************/
+
+
+/***************choose sponsor start*************/
+
+.choose-sponsor {
+    text-align: center;
+    padding: 30px;
+    color: white;
+    font-size: 20px;
+}
+
+.image-set {
+    text-align: center; 
+    display: none;
+}
+
+.sponsor-image {
+    margin: 30px 0;
+}
+
+.clickable-image {
+    max-width: 600px;
+    transition: transform 0.3s ease;
+    width: 500px;
+    height: auto;
+}
+
+.clickable-image:hover {
+    transform: scale(1.1);
+}
+
+
+.dot {
+    padding: 5px 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+    background-color: yellow;
+}
+
+.dot.active {
+    background-color: #555; 
+}
+
+.select-btn, .bottom-btn {
+    padding: 10px 20px;
+    margin: 10px 50px;
+    border: none;
+    cursor: pointer;
+    background-color: #bbb;
+    color: black;
+    border-radius: 5px;
+}
+
+.bottom-btn {
+    display: block;
+    width: 20%;
+    margin-top: 30px;
+}
+
+.selected-image {
+    border: 5px solid white; 
+}
+
+#set1 {
+    display: block;
+}
+
+
+
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #bbb;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    position: fixed;     
+    top: 40%;             
+    left: 50%;            
+    transform: translate(-50%, -50%); 
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.select-btn:hover, .bottom-btn:hover {
+    background-color: yellow;
+    color: black; /* 如果需要，可以更改悬停时的文字颜色 */
+}
+
+@media only screen and (max-width: 420px) {
+    .choose-sponsor {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .clickable-image {
+        max-width: 280px;
+        width: 100%;
+        height: auto;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+    }
+
+    .dot {
+        padding: 3px 6px;
+    }
+
+    .select-btn, .bottom-btn {
+        margin: 5px 20px;
+        padding: 8px 16px;
+    }
+
+    .bottom-btn {
+        width: 20%;
+    }
+}
+/***************choose sponsor end*************/
+
+/***************mysponsor start*************/
+body.chooseSponsorPage {
+    background-color: #1F3A58;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.sponsor-content {
+    max-width: 800px;
+    margin: 5px auto;
+    text-align: center;
+}
+
+.sponsor-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.sponsor-content h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.selected-sponsor-image img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.sponsor-message {
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-left, .btn-right {
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+}
+
+.btn-left{
+    background-color: #eee;
+}
+
+.btn-right{
+    background-color: yellow;
+}
+.btn-left:hover, .btn-right:hover {
+    background-color: yellow;
+}
+
+
+/***************mysponsor end*************/
+
+/***************questionnaire start*************/
+.star {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.star.active {
+    color: gold;
+}
+
+.btn-right1{
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    background-color: yellow;
+    margin-left: 50px;
+}
+
+.FINSH{
+    background-color: #F5F2E8;
+    color: black;
+    border: none;
+    padding: 20px 300px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#finishBtn {
+    display: none;
+}
+
+
+.modal1 {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content1 p {
+    color: black;
+}
+
+.modal-content1 {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    text-align: center;
+    position: fixed;     
+    top: 30%;             
+    left: 40%;            
+    transform: translate(-50%, -50%); 
+}
+
+.close1 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+

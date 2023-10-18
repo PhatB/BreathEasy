@@ -1,5 +1,9 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1170px) {
     /* For mobile phones: */
+    body{
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
 
     .footer{
         position: fixed;
@@ -158,6 +162,83 @@
     .TakeCigButton:active{
         background-color: #a80000;
     }
+  
+    /* Landing/Login page start */
+    .LandingPage{
+        background-color: #00214c;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+    .LandingButton{
+        background-color: #00214c;
+        border: none;
+        padding: 0 ;
+    }
+    .LandingLogo{
+        display: flex;
+        position: absolute;
+        top: 30%;
+        left: 30%;
+    }
+    .AccountForms{
+        display: none;
+        background-color: #003882;
+        border-radius: 50px;
+        /* height: 650px; */
+        padding: 50px;
+        position: relative;
+        top: 100px;
+        background-image: url("/Assets/image4Transparent.png");
+        background: size 100px;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+    .AccountForms h2{
+        background-color: #87a8c2;
+        border-radius: 20px;
+        padding: 10px 50px 10px 50px;
+    }
+    .AccountForms button{
+        /* border: none; */
+        border: 5px;
+        border-color: #001127;
+        background-color: #00214c;
+        color: white;
+        width: 100px;
+        height: 50px;
+        border-radius: 20px;
+        font-size: medium;
+
+    }
+    .AccountForms button:active{
+        background-color: #001127;
+    }
+
+    }
+    .Login{
+        /* display: block; */
+        display: none;
+    }
+    .Login input{
+        display: grid;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 5px 5px 30px 5px;
+        width: 250px;
+    }
+    .SignUp{
+        /* display: none; */
+        display: block;
+        justify-content: center;
+    }
+    .SignUp input{
+        display: grid;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 5px 5px 30px 5px;
+        width: 250px;
+    }
 
 
-  }
+}

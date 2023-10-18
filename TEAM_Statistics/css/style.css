@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  :root {
+    --fb-post-border: #088AE9;
+  
+    --fb-post-bg: #262728;
+    --fb-post-color: #FFFFFF;
+  
+    --fb-post: #FFFFFF;
+  
+    --fb-post-btn-bg: #3A3B3C;
+    --fb-post-btn-color: #FFFFFF;
+    --fb-post-btn-bg-hover: #464849;
+  
+    --fb-reactions-bg: #3A3B3C;
+  }
+body{
+    background-color: #DAE4F2;
+    justify-content: center;
+}
+.diary-box{
+    background:#FCFFF1;
+    width: 400px;
+    margin: 10px 10px;
+    font-family: 'IM Fell Great Primer', serif;
+}
+#comments{
+    width: 400px;
+    height: 80px;
+    margin: 5px 10px;
+    color: grey;
+    font-style: italic;
+    font-family: 'IM Fell Great Primer', serif;
+}
+input{
+    float: right;
+}
+.p{
+  font-family: 'IM Fell Great Primer', serif;
+}
+
+  /* Timeline Container */
+  .timeline {
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  /* Outer Layer with the timeline border */
+  .outer {
+    border-left: 2px solid #333;
+  }
+  
+  /* Card container */
+  .card {
+    position: relative;
+    margin: 0 0 20px 20px;
+    padding: 10px;
+    color: gray;
+    border-radius: 8px;
+    max-width: 400px;
+  }
+  
+  /* Information about the timeline */
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Title of the card */
+  .title {
+    color: black;
+    position: relative;
+  }
+  
+  /* Timeline dot  */
+  .title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #FCFFF1;
+    border-radius: 999px;
+    left: -39px;
+    border: 3px solid orangered;
+  }
+  img{
+    width: 20px;
+    height: 20px;
+  }
+  ul{
+    position: absolute;
+    display: flex;
+    width: 200px;
+  }
+  ul li{ 
+    background: #555; 
+    display: block;
+    padding: .2rem;
+    border-radius: .5rem;
+  }
+  ul li img{display:block !important;} 
+  ul li:hover {background: #666;}
+  button{
+    padding: .5rem .33rem;
+    width: 100%;
+    border-radius: .5rem;
+    border: none;
+    color: black;
+    background-color: rgb(181, 200, 229);
+    transition: background .3s ease;
+  }
+  button:hover {
+    background-color: white;
+      top:-133;
+      opacity: 1;
+      pointer-events: auto;
+  }
+  .post-interactions {
+    display: flex;
+    gap: 0 .25rem;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    }
+    .dot {
+      height: 25px;
+      width: 25px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }

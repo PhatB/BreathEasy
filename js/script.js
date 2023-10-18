@@ -5,11 +5,10 @@ var CigsTaken = document.getElementById("Cigs")
 var OneCigsAtTheTime = 0;
 
 if ( document.URL.includes("homepage.html") ) {
-  TakeCigs.addEventListener("click", function(){
-      OneCigsAtTheTime ++;
-      CigsTaken.textContent = `${OneCigsAtTheTime}`;
-  })
-
+TakeCigs.addEventListener("click", function(){
+    OneCigsAtTheTime ++;
+    CigsTaken.textContent = `${OneCigsAtTheTime}`;
+})
 function updateTimer() {
 
 
@@ -43,9 +42,8 @@ function updateTimer() {
 }
 setInterval('updateTimer()', 1000 );
 
-
-
 }
+
 
 
 
@@ -66,59 +64,58 @@ function GetDateToday(){
 
 // Login script start here
 
-// Sample accounts stored in a JSON object
-let accounts = {
-  "user1": "password1",
-  "user2": "password2"
-};
+// Create Account WIP
+// function addAccount(username, password) {
+//   // Retrieve existing account data from LocalStorage
+//   const existingAccounts = JSON.parse(localStorage.getItem("userAccounts")) || {};
+
+//   if (existingAccounts[username]) {
+//       alert("Account already exists!");
+//   } else {
+//       existingAccounts[username] = password;
+//       localStorage.setItem("userAccounts", JSON.stringify(existingAccounts));
+//       alert("Account added successfully!");
+//   }
+// }
+// Create an account
+function SignUp() {
+  let username = document.getElementById("signup-username").value;
+  let password = document.getElementById("signup-password").value;
+
+  // addAccount(username, password);
+
+
+  window.location.href = "/Pages/Start.html";
+}
+
+// Login WIP
+// function VerifyAccount(username, password){
+//   const existingAccounts = JSON.parse(localStorage.getItem("userAccounts")) || {};
+//   console.log(existingAccounts);
+//   console.log(username,password);
+  
+//   if (existingAccounts == username && existingAccounts.value == password) {
+//       // Successful login
+//       alert("Login successful!");
+//   } else {
+//       // Login failed
+//       alert("Login failed. Please check your credentials.");
+
+//   }
+// }
+
 
 function login() {
   let username = document.getElementById("login-username").value;
   let password = document.getElementById("login-password").value;
 
-  if (accounts[username] && accounts[username] === password) {
-      alert("Login successful!");
-  } else {
-      alert("Login failed. Please check your credentials.");
-  }
+  // VerifyAccount(username, password);
+
+
+  window.location.href = "/Pages/Start.html";
 }
 
-// Create an account
-const fs = require('fs');
-const path = require('path');
 
-const accountsFilePath = path.join(__dirname, "/js/account.json");
-
-function createAccount(username, password) {
-    // Load existing accounts from the file, or create an empty array
-    let accounts = [];
-    if (fs.existsSync(accountsFilePath)) {
-        const data = fs.readFileSync(accountsFilePath, 'utf-8');
-        accounts = JSON.parse(data);
-    }
-
-    // Check if the account already exists
-    const existingAccount = accounts.find(account => account.username === username);
-    if (existingAccount) {
-        console.log('Account already exists.');
-        return;
-    }
-
-    // Add the new account to the array
-    accounts.push({ username, password });
-
-    // Write the updated array back to the file
-    fs.writeFileSync(accountsFilePath, JSON.stringify(accounts, null, 2));
-    console.log('Account created successfully.');
-}
-
-function SignUp(){
-  let username = document.getElementById("signup-username").value;
-  let password = document.getElementById("signup-password").value;
-
-  createAccount(username, password)
-
-}
 
 
 

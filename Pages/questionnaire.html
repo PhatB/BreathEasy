@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="profile">
+
+<div class="form-container">
+    <h2>Questionaire</h2>
+
+    <label for="price">Price of packet now(AUD)</label><br>
+    <input type="number" id="price" name="price"><br>
+
+
+    <label for="day">How many do you smoke a day now? </label><br>
+    <input type="number" id="day" name="day"><br>
+
+    <label for="price">How long have you used this products?(day/s)</label><br>
+    <input type="number" id="day" name="day"><br>
+
+    <label for="experience">Are you happy with it? Share your experiences. </label><br>
+    <input type="text" id="experience" name="experience"><br>
+
+    <label>Are you happy with your sponsor? Share your experiences. </label><br>
+    <input type="text" id="experience" name="experience"><br>
+
+    <label>Rate your sponsor</label><br>
+    <div class="stars">
+        <span class="star" data-value="1">&#9734;</span>
+        <span class="star" data-value="2">&#9734;</span>
+        <span class="star" data-value="3">&#9734;</span>
+        <span class="star" data-value="4">&#9734;</span>
+        <span class="star" data-value="5">&#9734;</span>
+    </div>
+
+    <label for="motivation">Your motivation to quit?</label><br>
+    <input id="motivation" type="text" name="motivation"><br>
+
+    <p>Match the other sponsor who assistant in your next quitting smoking journey?</p>
+    
+    <div class="buttons-container1">
+        <button class="btn-left" onclick="showModal()">Keep that</button>
+        <a href="./choose sponsor.html"><button class="btn-right1">Find another</button></a><br><br>
+    </div>
+    <div id="myModal" class="modal1">
+        <div class="modal-content1">
+            <span class="close1">&times;</span>
+            <p>Save Successfully!</p>
+        </div>
+    </div>
+
+    <a href="/Pages/Home.html"><button id="finishBtn" class="FINSH">FINISH</button></a>
+
+    
+</div>
+<script src="./logo.js"></script>
+</body>
+</html>

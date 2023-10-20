@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -21,14 +21,14 @@
             <div class="SponsorBar">
                 <img src="/Assets/SponsorAvatar.png" alt="Sponsor Avatar">
                 <h3 class="SponsorName">John Bob</h3>
-                <a class="ButtonSponsor" href="/Pages/Chat.html">
+                <a class="ButtonSponsor" href="/Pages/Messages.html">
                     <button>
                         <img src="/Assets/ChatIcon.png" alt="Chat Icon">
                         <h4 class="ButtonName">Chat</h4>
                     </button>
                 </a>
 
-                <a class="ButtonSponsor" href="/Pages/SwapMenu">
+                <a class="ButtonSponsor" href="/Pages/questionnaire.html">
                     <button>
                         <img src="/Assets/SwitchPeople.png" alt="Switch Icon">
                         <h4 class="ButtonName">Swap</h4>
@@ -36,7 +36,29 @@
                 </a>
             </div>
             <!-- Sponsor Bar end here -->
+
+
             <!-- Progress start here -->
+
+
+            <div class="CigsTakenSection">
+                <img src="/Assets/ClockTimer.png" alt="">
+                <h4>Number of cigarettes taken</h4>
+                <div class="CigsTaken">
+                    <h2 id="Cigs">
+                        0
+                    </h2>
+                    <h2>
+                        Cigarettes
+                    </h2>
+                </div>
+                <div>
+                    <button class="TakeCigButton" id="CigsButton">
+                        Take one
+                    </button>
+                </div>
+            </div>
+            
             <H2 class="ProgressTitle">My Progress</H2>
             <div class="ProgressSection">
                 <div class="TimerBar">
@@ -66,43 +88,24 @@
                         <h5>8.2 days</h5> 
                     </div>
                 </div>
-                <div class="CigsTakenSection">
-                    <img src="/Assets/ClockTimer.png" alt="">
-                    <h4>Number of cigarettes taken</h4>
-                    <div class="CigsTaken">
-                        <h2 id="Cigs">
-                            0
-                        </h2>
-                        <h2>
-                            Cigarettes
-                        </h2>
-                    </div>
-                    <div>
-                        <button class="TakeCigButton" id="CigsButton">
-                            Take one
-                        </button>
-                    </div>
-                </div>
+
                 
 
                 
             </div>
-            <!-- <div class="">
-
-            </div> -->
             <!-- Progress end here -->
         </div> 
         <!-- Home Feed end here -->
 
 
         <!-- Footer start here -->
-        <foo class = "footer">
+        <footer class = "footer">
             <a href="./Home.html">
                 <button class ="ButtonFooter">
                     <img src="/Assets/Home-1.png" alt="Home icon">
                 </button>
             </a>
-            <a href="/Pages/Diary.html">
+            <a href="/Pages/diary.html">
                 <button class ="ButtonFooter">
                     <img src="/Assets/Diary.png" alt="Diary icon">
                 </button>
@@ -110,18 +113,18 @@
                 
                     <img class="LogoFooter" src="/Assets/image 4.png" alt="Logo icon">
                 
-            <a href="/Pages/Stat.html">
+            <a href="/Pages/stat.html">
                 <button class ="ButtonFooter">
                     <img src="/Assets/statistic.png" alt="Statistic icon">
                 </button>
             </a>
 
-            <a href="/Pages/Setting.html">
+            <a href="/Pages/setting.html">
                 <button class ="ButtonFooter">
                     <img src="/Assets/setting.png" alt="Setting icon">
                 </button>
             </a>
-        </foo>
+        </footer>
         <!-- Footer end here -->
     </div>
     <script src="/js/script.js"></script>

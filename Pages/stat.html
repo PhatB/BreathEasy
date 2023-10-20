@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/white.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <head>
+        <title>Today Statistics</title>
+    </head>
+
+    <body>
+        <div class="title">
+            <span class="material-symbols-outlined" onclick="history.back()">arrow_back</span>
+            <h2>Today Statistics</h2>
+            <p>21/05/2023</p>
+        </div>
+        <div class="main-stat">
+            <h4>Cravings Statistic</h4>
+            <div class="column-one">
+                <p><b>Today's smoking total: </b><u>5 cigarettes</u></p>
+                <p><b>Compared to 20 days ago: </b><u>20 cigarettes less</u></p>
+                <canvas id="myChart"></canvas>
+                <p><b>The number of requests for sponsors: </b><u>120 times</u></p>
+                <p><b>Level of addiction: </b><u>Light</u></p>
+            </div>
+            <h4>Smoked Cigarettes</h4>
+            <div class="column-two">
+                <p>5 Attempts<p>
+                <div class="cigarette_">
+                    <img src="/images/cigarette_.svg">
+                    <img src="/images/cigarette_.svg">
+                    <img src="/images/cigarette_.svg">
+                    <img src="/images/cigarette_.svg">
+                    <img src="/images/cigarette_.svg">
+                </div>
+            </div>
+            <h4>Stay Clean For</h4>
+            <div class="column-two">
+                <p>120 Days<p>
+                    <div class="cigarette_">
+                        <img src="/images/calendar_.svg">
+                        <img src="/images/calendar_.svg">
+                        <img src="/images/calendar_.svg">
+                        <img src="/images/calendar_.svg">
+                        <img src="/images/calendar_.svg">
+                        <img src="/images/calendar_.svg">
+                    </div>
+            </div>
+        </div>
+        <script src="./js/stat.js"></script>
+        <footer class = "footer">
+            <a href="./Home.html">
+                <button class ="ButtonFooter">
+                    <img src="/Assets/Home-1.png" alt="Home icon">
+                </button>
+            </a>
+            <a href="/Pages/diary.html">
+                <button class ="ButtonFooter">
+                    <img src="/Assets/Diary.png" alt="Diary icon">
+                </button>
+            </a>
+                
+                    <img class="LogoFooter" src="/Assets/image 4.png" alt="Logo icon">
+                
+            <a href="/Pages/stat.html">
+                <button class ="ButtonFooter">
+                    <img src="/Assets/statistic.png" alt="Statistic icon">
+                </button>
+            </a>
+
+            <a href="/Pages/setting.html">
+                <button class ="ButtonFooter">
+                    <img src="/Assets/setting.png" alt="Setting icon">
+                </button>
+            </a>
+        </footer>
+    </body>
+</html>

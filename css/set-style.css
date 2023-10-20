@@ -1,0 +1,70 @@
+body{
+    background: #FCFFF1;
+}
+
+h4{
+    font-family: 'IM Fell Great Primer', serif;
+    font-size: 33px;
+}
+p{
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    margin: 0;
+    padding: 5px;
+}
+.main-content {
+    width: 430px;
+    height: 932px;
+    padding-top: 50px;
+    padding-left: 25px;
+}
+.user-profile{
+    width: 365px;
+    height: 67px;
+    border-radius: 8px;
+    background-color: #D9E3F1;
+    display:flex;
+    column-gap: 30px;
+    align-items: center;
+
+}
+.dot {
+    height: 43px;
+    width: 43px;
+    background-color: #1F3A58;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 15px;
+}
+.four-rows{
+    width: 365px;
+    height: 172px;
+    border-radius: 6px;
+    background: rgba(126, 127, 136, 0.05);
+    display: flex;
+}
+.three-rows{
+    width: 365px;
+    height: 132px;
+    border-radius: 6px;
+    background: rgba(126, 127, 136, 0.05);
+    display: flex;
+}
+.two-rows{
+    width: 365px;
+    height: 94px;
+    border-radius: 6px;
+    background: rgba(126, 127, 136, 0.05);
+    display: flex;
+}
+.icons-text{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    height: 38px;
+    margin: 10px 10px;
+    gap:10px;
+    margin-left: 20px;
+}

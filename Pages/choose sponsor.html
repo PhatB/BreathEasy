@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Sponsor</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body id="chooseSponsorPage">
+
+
+<div class="choose-sponsor">
+    <h2>Match the sponsor who assistant in your quitting smoking journey</h2>
+
+
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Confirm</h2>
+      <p id="sponsorName">Sponsor Name</p>
+      <p>Will be your Quit smoking sponsor</p>
+      <button onclick="confirmSponsor()">Yes</button>
+      <button onclick="closeModal()">Back</button>
+    </div>
+  </div>
+
+
+<div class="image-set" id="set1">
+
+    <div class="sponsor-image">
+        <img src="/Assets/profil1.png" alt="Micheal Scott" class="clickable-image" onclick="toggleImageSelection(this)">
+
+    </div>
+
+
+    <div class="sponsor-image">
+        <img src="/Assets/profil2.png" alt="Harrison Walker" class="clickable-image" onclick="toggleImageSelection(this)">
+    </div>
+</div>
+
+<div class="image-set" id="set2">
+    <div class="sponsor-image">
+        <img src="/Assets/profil3.png" alt="Leon Zhang" class="clickable-image" onclick="toggleImageSelection(this)">
+    </div>
+
+
+    <div class="sponsor-image">
+        <img src="/Assets/profil4.png" alt="Lucy" class="clickable-image" onclick="toggleImageSelection(this)">
+    </div>
+</div>
+
+<div class="image-set" id="set3">
+    <div class="sponsor-image">
+        <img src="/Assets/profil5.png" alt="Micheal" class="clickable-image" onclick="toggleImageSelection(this)">
+    </div>
+
+
+    <div class="sponsor-image">
+        <img src="/Assets/profil6.png" alt="Neil" class="clickable-image" onclick="toggleImageSelection(this)">
+    </div>
+</div>
+
+
+    <div id="dots">
+        <button class="dot" onclick="showImageSet('set1')">1</button>
+        <button class="dot" onclick="showImageSet('set2')">2</button>
+        <button class="dot" onclick="showImageSet('set3')">3</button>
+    </div>
+
+    <a href="/Pages/my sponsor.html"><button class="select-btn">Select Sponsor</button></a>
+    <a href="/Pages/profile.html"><button class="bottom-btn">Back</button></a>
+</div>
+<script src="/js/script.js"></script>
+</body>
+
+</html>

@@ -1,9 +1,9 @@
 @media only screen and (max-width: 1170px) {
     /* For mobile phones: */
-    body{
+    /* body{
         font-family: Arial, sans-serif;
         text-align: center;
-    }
+    } */
 
     .footer{
         position: fixed;
@@ -79,7 +79,7 @@
     }
     .ButtonName{
         position: relative;
-        bottom: 10px;
+        bottom: 0px;
     }
     .SponsorBar button:active{
         background-color: #accce3;
@@ -88,7 +88,7 @@
     .TimerBar{
         
         display: table;
-        width: 92%;
+        width: 95%;
         background-color: #71efc1c9;
         justify-content: center;
         padding: 10px;
@@ -97,6 +97,9 @@
         align-items: center;
         /* height: 55px; */
 
+    }
+    .TimerBar h4{
+        margin-bottom: 5px;
     }
     #Timer div {
         display: inline-block;
@@ -109,13 +112,17 @@
     font-weight: 400;
     }
     /* Timer style end */
+    .ProgressTitle{
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }
 
     .SmallProgressSection{
         display: flex;
     }
 
     .SmallProgressBar{
-        width: 92%;
+        width: 90%;
         background-color: #71efc1c9;
         justify-content: center;
         padding: 10px;
@@ -129,6 +136,7 @@
     .CigsTakenSection{
         display: grid;
         width: 92%;
+        margin-bottom: 30px;
         
         /* grid-row: 2; */
     }
@@ -158,6 +166,8 @@
         border-radius: 10px;
         padding: 5px 10px;
         margin-top: 5px;
+        margin-bottom: 10px;
+        
     }
     .TakeCigButton:active{
         background-color: #a80000;
@@ -246,7 +256,7 @@
 
 
 /***************startpage start*************/
-body.start {
+.start {
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -256,20 +266,23 @@ body.start {
     background-color: #1F3A58;
 }
 
-.start .content {
+.content {
     text-align: center;
     width: 100%;
     position: relative;
 }
 
-.start .text {
+
+.text {
     font-size: 80px; 
     font-weight: bold;
-    margin-bottom: 300px;
+    position:absolute;
+    bottom: 10px;
+    right: -50px;
     color: white
 }
 
-.start .centered-button {
+.centered-button {
     background-color: #F5F2E8;
     color: black;
     border: none;
@@ -283,7 +296,7 @@ body.start {
     transform: translateX(-50%);
 }
 
-.start .centered-button:hover {
+.centered-button:hover {
     background-color: yellow;
 }
 
@@ -302,7 +315,7 @@ body.start {
 
 
 
-.start .continue-btn {
+.continue-btn {
     background-color: #F5F2E8;
     color: black;
     border: none;
@@ -320,12 +333,12 @@ body.start {
 }
 
 @media only screen and (max-width: 480px) {
-    .start .text {
+    .text {
         font-size: 32px; 
         margin-bottom: 100px;
     }
 
-    .start .centered-button {
+    .centered-button {
         padding: 8px 40px;
         font-size: 12px;
     }
@@ -336,7 +349,7 @@ body.start {
         max-width: 100%; 
     }
 
-    .start .continue-btn {
+    .continue-btn {
         padding: 8px 100px;
         font-size: 12px;
     }
@@ -565,7 +578,7 @@ button.sponsor:hover {
 /***************choose sponsor end*************/
 
 /***************mysponsor start*************/
-body.chooseSponsorPage {
+.chooseSponsorPage {
     background-color: #1F3A58;
     font-family: Arial, sans-serif;
     color: white;
@@ -750,9 +763,9 @@ body.chooseSponsorPage {
     font-style: italic;
     font-family: 'IM Fell Great Primer', serif;
 }
-input{
+/* input{
     float: right;
-}
+} */
 .p{
   font-family: 'IM Fell Great Primer', serif;
 }
@@ -802,10 +815,10 @@ input{
     left: -39px;
     border: 3px solid orangered;
   }
-  img{
+  /* img{
     width: 20px;
     height: 20px;
-  }
+  } */
   ul{
     position: absolute;
     display: flex;
@@ -828,12 +841,12 @@ input{
     background-color: rgb(181, 200, 229);
     transition: background .3s ease;
   }
-  button:hover {
+  /* button:hover {
     background-color: white;
       top:-133;
       opacity: 1;
       pointer-events: auto;
-  }
+  } */
   .post-interactions {
     display: flex;
     gap: 0 .25rem;

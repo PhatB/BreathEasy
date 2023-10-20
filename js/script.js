@@ -4,7 +4,7 @@ var TakeCigs = document.getElementById("CigsButton")
 var CigsTaken = document.getElementById("Cigs")
 var OneCigsAtTheTime = 0;
 
-if ( document.URL.includes("homepage.html") ) {
+if ( document.URL.includes("Home.html") ) {
 TakeCigs.addEventListener("click", function(){
     OneCigsAtTheTime ++;
     CigsTaken.textContent = `${OneCigsAtTheTime}`;
@@ -85,7 +85,7 @@ function SignUp() {
   // addAccount(username, password);
 
 
-  window.location.href = "/Pages/Start.html";
+  window.location.href = "/Pages/TOS.html";
 }
 
 // Login WIP
@@ -112,7 +112,7 @@ function login() {
   // VerifyAccount(username, password);
 
 
-  window.location.href = "/Pages/Start.html";
+  window.location.href = "/Pages/TOS.html";
 }
 
 
@@ -302,3 +302,64 @@ function showModal() {
 }
 
 // Login script end here
+
+
+// Create an array where the message along with its ID will be stored.
+let message = [];
+
+if ( document.URL.includes("Messages.html") ) {
+function addMessage(text) {
+    // Object where the message will be stored
+    const chat = {
+        text,
+        id: Date.now()
+    }
+
+    message.push(chat);
+
+    const list = document.querySelector('.msg-content');
+    const messageItem = document.createElement('div');
+    messageItem.classList.add('message-item');
+    messageItem.setAttribute('data-key', chat.id);
+
+    // Create a <span> element for the message text
+    const messageText = document.createElement('span');
+    messageText.textContent = chat.text;
+
+    // Create a <span> element for the current time
+    const currentTime = document.createElement('span');
+
+    // Format the current time as "00:00"
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    currentTime.textContent = `${hours}:${minutes}`;
+
+    // Append both message text and time spans to the message item
+    messageItem.appendChild(messageText);
+    messageItem.appendChild(currentTime);
+
+    list.appendChild(messageItem);
+}
+
+const form = document.querySelector('.input-group');
+form.addEventListener('submit', event => {
+    event.preventDefault();
+
+    // Input to save the message itself
+    const input = document.querySelector('.message');
+
+    // This helps us to detect empty messages and ignore them
+    const text = input.value.trim();
+
+    if (text !== '') {
+        addMessage(text);
+        input.value = '';
+        input.focus();
+    }
+});
+}
+
+
+
+

@@ -749,6 +749,10 @@ button.sponsor:hover {
     background-color: #DAE4F2;
     justify-content: center;
 } */
+#postForm{
+    margin-left: 40px;
+    margin-top: 20px;
+}
 .diary-box{
     background:#FCFFF1;
     width: 400px;

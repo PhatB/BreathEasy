@@ -14,17 +14,14 @@
     <body>
         <div class="diary-box">
             <h2>Diary</h2>
-            <p id="msg"></p>
+
         </div>
-        <div>
-            <form action="/html/tags/html_form_tag_action.cfm" method="post">
-                <div>
-                <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
-                Share your quiting diaries here!
-                </textarea>
-                </div>
-            <input type="submit" value="Submit">
-            </form>
+        <div id="postForm">
+            <input type="text" id="title" placeholder="Enter title">
+            <input type="text" id="author" placeholder="Enter author name">
+            <input type="text" id="date" placeholder="Enter date">
+            <textarea id="content" placeholder="Enter content"></textarea>
+            <button onclick="createPost()">Submit</button>
         </div>
 
         <div class="timeline">

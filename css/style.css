@@ -150,7 +150,6 @@
         width: 100%;
         background-color: #f78282;
         justify-content: space-between;
-
         padding: 10px;
         margin-left: 6px;
         border-radius: 10px;
@@ -162,7 +161,7 @@
     }
     .TakeCigButton{
         border: none;
-        background-color: #00214c;
+        background-color: #00214d;
         color: white;
         border-radius: 10px;
         padding: 5px 10px;
@@ -173,7 +172,33 @@
     .TakeCigButton:active{
         background-color: #a80000;
     }
-  
+    .TakeCigButton:disabled{
+        opacity: 60%;
+    }
+    .TakeCigButton:disabled:active{
+        opacity: 60%;
+        background-color: #00214d ;
+    }
+    .RefillCigButton{
+        border: none;
+        background-color: #00214c;
+        color: white;
+        border-radius: 10px;
+        padding: 5px 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        /* opacity: 60%; */
+    }
+    .RefillCigButton:active{
+        background-color: #a80000;
+    }
+    .RefillCigButton:disabled{
+        opacity: 60%;
+    }
+    .RefillCigButton:disabled:active{
+        opacity: 60%;
+        background-color: #00214d ;
+    }
     /* Landing/Login page start */
     .LandingPage{
         background-color: #00214c;

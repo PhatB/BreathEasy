@@ -1,19 +1,44 @@
 var currentDate = `${GetDateToday()}`;
 
-var TakeCigs = document.getElementById("CigsButton")
+const TakeCigs = document.querySelector("#CigsButton")
+const RefillButton = document.querySelector("#RefillCigsButton")
+
 var CigsTaken = document.getElementById("Cigs")
 var CigsPack = document.getElementById("CigsNum")
 var OneCigsAtTheTime = 0;
 var FullPack = 20;
 var CigsLeft = FullPack;
 
+
 if ( document.URL.includes("Home.html") ) {
 TakeCigs.addEventListener("click", function(){
     OneCigsAtTheTime ++;
     CigsLeft --;
-    CigsTaken.textContent = `${OneCigsAtTheTime}`;
-    CigsPack.textContent = `${CigsLeft}`
+    
+
+    if(CigsLeft < 0){
+      CigsPack.textContent = "0";
+      console.log("shot")
+      TakeCigs.disabled = true;
+      RefillButton.disabled = false;
+
+    }else{
+      CigsPack.textContent = `${CigsLeft}`;
+      CigsTaken.textContent = `${OneCigsAtTheTime}`;
+      RefillButton.disabled = true;
+
+    }
+  }
+)
+RefillButton.addEventListener("click", function(){
+  OneCigsAtTheTime --;
+  CigsPack.textContent = `${FullPack}`;
+  CigsLeft = FullPack;
+
+  TakeCigs.disabled = false;
+  RefillButton.disabled = true;
 })
+
 function updateTimer() {
 
 

@@ -1,6 +1,11 @@
-body{
-    background: #FCFFF1;
+.sub-title{
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
+<<<<<<< HEAD
 
 h4{
     font-family: 'IM Fell Great Primer', serif;
@@ -8,6 +13,9 @@ h4{
 }
 
 p{
+=======
+.icons-text p{
+>>>>>>> Yushaneva-patch-1
     color: #000;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -16,6 +24,7 @@ p{
     padding: 5px;
 }
 .main-content {
+    background: #FCFFF1;
     width: 430px;
     height: 932px;
     padding-top: 50px;

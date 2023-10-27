@@ -12,15 +12,15 @@
     <div class="Content">
 
         <!-- Home Feed start here -->
-        <div class="HomeFeed">
+        <div class="HomeFeed" id="HomeFeed">
             <h1 class="UserGreet">Hi, user</h1>
             <div class="UserAva"></div>
 
             <!-- Sponsor bar start here -->
             <H2 class="SponsorTitle">My sponsor</H2>
             <div class="SponsorBar">
-                <img src="/Assets/SponsorAvatar.png" alt="Sponsor Avatar">
-                <h3 class="SponsorName">John Bob</h3>
+                <img id="SponsorAva" src="/Assets/SponsorAvatar.png" alt="Sponsor Avatar">
+                <h3 class="SponsorName" id="SponsorName">John Bob</h3>
                 <a class="ButtonSponsor" href="/Pages/Messages.html">
                     <button>
                         <img src="/Assets/ChatIcon.png" alt="Chat Icon">
@@ -36,6 +36,15 @@
                 </a>
             </div>
             <!-- Sponsor Bar end here -->
+
+
+
+            <div id="Alert" class="AlertBox">
+              <div class="Alert-content">
+                <span class="CloseAlert" id="CloseAlert">&times;</span>
+                <p>You are taking too much cigarettes! <br> A message have been send to your sponsor</p>
+              </div>
+            </div>
 
 
             <!-- Progress start here -->
@@ -73,7 +82,7 @@
                     <div class="SmallProgressBar">
                         <img src="/Assets/icon money.png" alt="Money icon">
                         <h4>Money spent</h4>
-                        <h5>0 AUD</h5>
+                        <h5 id="MoneyNum">0 AUD</h5>
                     </div>
                     <div class="SmallProgressBar">
                         <img src="/Assets/no smoke icon.png" alt="No Smoke icon">

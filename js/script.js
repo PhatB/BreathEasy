@@ -8,13 +8,36 @@ var CigsPack = document.getElementById("CigsNum")
 var OneCigsAtTheTime = 0;
 var FullPack = 20;
 var CigsLeft = FullPack;
+var HomeSponsor = document.getElementById("SponsorName")
+var HomeSponsorAva = document.getElementById("SponsorAva")
+var MoneySpent = document.getElementById("MoneyNum")
+var AvgCigCost = 0;
+
+let CigsTimer;
+
 
 
 if ( document.URL.includes("Home.html") ) {
+  HomeSponsor.textContent = `${sessionStorage.getItem("SponsorChosen")}`
+  console.log(HomeSponsor)
+  if(HomeSponsor.textContent == "Leon Zhang"){
+    HomeSponsorAva.src = "/Assets/Leon.png"
+  };
+
 TakeCigs.addEventListener("click", function(){
     OneCigsAtTheTime ++;
     CigsLeft --;
-    
+    MoneySpent.textContent = `${AvgCigCost += 2} AUD`;
+    CigsTimer = setTimeout(function(){ console.log("Cig timer is done")},8000)
+    if(CigsTimer){
+      console.log("the Cigstimer is running")
+      if(CigsLeft == 5 && CigsTimer){
+
+        ShowWarning();
+        sessionStorage.setItem("IsWarningMessage", "true")
+       
+      };
+    };
 
     if(CigsLeft < 0){
       CigsPack.textContent = "0";
@@ -37,7 +60,10 @@ RefillButton.addEventListener("click", function(){
 
   TakeCigs.disabled = false;
   RefillButton.disabled = true;
+
 })
+
+
 
 function updateTimer() {
 
@@ -74,8 +100,31 @@ setInterval('updateTimer()', 1000 );
 
 }
 
+if(document.URL.includes("Messages.html")){
+  var WarningOn = sessionStorage.getItem("IsWarningMessage")
+  if(WarningOn == "true"){
+    document.getElementById("MessageWarning").style.display = "flex";
+  }
+  setInterval(function(){
+    sessionStorage.setItem("IsWarningMessage", "false");
+    document.getElementById("MessageWarning").style.display = "none";
+    console.log("shit is done")
+  }, 5000);
 
+  
+}
 
+function ShowWarning(){
+  document.getElementById("Alert").style.display = "block";
+  // Close the custom alert box
+
+  document.getElementById("CloseAlert").addEventListener("click", function() {
+
+    
+    document.getElementById("Alert").style.display = "none";
+    }
+  )
+}
 
 
 function GetDateToday(){
@@ -92,64 +141,51 @@ function GetDateToday(){
       
 }
 
-// Login script start here
+              // Login script start here
 
-// Create Account WIP
-// function addAccount(username, password) {
-//   // Retrieve existing account data from LocalStorage
-//   const existingAccounts = JSON.parse(localStorage.getItem("userAccounts")) || {};
-
-//   if (existingAccounts[username]) {
-//       alert("Account already exists!");
-//   } else {
-//       existingAccounts[username] = password;
-//       localStorage.setItem("userAccounts", JSON.stringify(existingAccounts));
-//       alert("Account added successfully!");
-//   }
-// }
 // Create an account
 function SignUp() {
   let username = document.getElementById("signup-username").value;
   let password = document.getElementById("signup-password").value;
 
-  // addAccount(username, password);
-
-
+  sessionStorage.setItem(username, password);
   window.location.href = "/Pages/TOS.html";
+  // ShowLogin()
+
 }
 
-// Login WIP
-// function VerifyAccount(username, password){
-//   const existingAccounts = JSON.parse(localStorage.getItem("userAccounts")) || {};
-//   console.log(existingAccounts);
-//   console.log(username,password);
-  
-//   if (existingAccounts == username && existingAccounts.value == password) {
-//       // Successful login
-//       alert("Login successful!");
-//   } else {
-//       // Login failed
-//       alert("Login failed. Please check your credentials.");
-
-//   }
-// }
 
 
-function login() {
+
+function Login() {
   let username = document.getElementById("login-username").value;
   let password = document.getElementById("login-password").value;
 
-  // VerifyAccount(username, password);
+  if(username == "" && password == ""){
+    ShowWarning()
+  }else{
+    var CorrectPassword = sessionStorage.getItem(username)
+    if (CorrectPassword === password){
+        window.location.href = "/Pages/Home.html";
+    }else{
+      ShowWarning()
+    }
+  }
 
 
-  window.location.href = "/Pages/TOS.html";
+
+
 }
 
 function ShowLogin(){
-    const LoginSection = document.getElementById("Login")
-    const SignUpSection = document.getElementById("SignUp")
+  document.getElementById("SignUp").style.display = "none"
+  document.getElementById("Login").style.display = "block"
 
+}
 
+function ShowSignUp(){
+  document.getElementById("SignUp").style.display = "block"
+  document.getElementById("Login").style.display = "none"
 }
 
 
@@ -267,6 +303,8 @@ function confirmSponsor() {
 function toggleImageSelection(imageElement) {
   var sponsorName = imageElement.alt; 
   openModal(sponsorName, imageElement.src);
+
+  sessionStorage.setItem("SponsorChosen", sponsorName);
 
   // If there is a previously selected image, remove its border
   if (currentlySelectedImage) {
@@ -417,6 +455,66 @@ new Chart("myChart", {
     }
   }
 });
+
+/* ALERT NOTIFICATION BOX */
+
+
+
+// function save(){	 
+//     var userPreference;
+
+//       if (confirm("Do you want to activate notifications?") == true) {
+//           alert("You can recieve notifications now!");
+//       } else {
+//           alert("Maybe later");
+//       }
+
+//   }
+
+/* Add new diary */
+function createPost() {
+    // Get user input
+    let title = document.getElementById('title').value;
+    let author = document.getElementById('author').value;
+    let date = document.getElementById('date').value;
+    let content = document.getElementById('content').value;
+
+    // Check if all fields have been filled out
+    if (title && author && date && content) {
+        // Create a new post
+        let newPost = `
+            <div class="outer">
+                <div class="card">
+                    <div class="info">
+                        <h3 class="title">${title}</h3>
+                        <p>by ${author} ${date}</p>
+                        <p>${content}</p>
+                        <div class="post-interactions">
+                            <button>like</button>
+                            <button>private</button>
+                            <button>public</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Get the timeline element
+        let timeline = document.querySelector('.timeline');
+
+        // Append the new post to the timeline
+        timeline.innerHTML = newPost + timeline.innerHTML;
+        
+        // Clear the form fields
+        document.getElementById('title').value = '';
+        document.getElementById('author').value = '';
+        document.getElementById('date').value = '';
+        document.getElementById('content').value = '';
+    } else {
+        alert('Please fill out all fields.');
+    }
+}
+
 
 
 

@@ -19,7 +19,10 @@
                 <h2>Login</h2>
                 <input type="text" id="login-username" placeholder="Username">
                 <input type="password" id="login-password" placeholder="Password">
-                <button onclick="login()">Login</button>
+                <button onclick="Login()">Login</button>
+                <div class="SwitchLogin">
+                    Don't have an account? <button class="LoginLink" onclick="ShowSignUp()">Sign up here</button>
+                </div>
             </div>
             <div class="SignUp" id="SignUp">
                 <h2>Create Account</h2>
@@ -31,6 +34,14 @@
                 </div>
             </div>
         </div>
+
+        <div id="Alert" class="AlertBox">
+        <div class="Alert-content">
+          <span class="CloseAlert" id="CloseAlert">&times;</span>
+          <p>Username or password is incorrect!</p>
+        </div>
+      </div>
+
     </div>
 
 

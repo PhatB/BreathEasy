@@ -14,17 +14,14 @@
     <body>
         <div class="diary-box">
             <h2>Diary</h2>
-            <p id="msg"></p>
+
         </div>
-        <div>
-            <form action="/html/tags/html_form_tag_action.cfm" method="post">
-                <div>
-                <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
-                Share your quiting diaries here!
-                </textarea>
-                </div>
-            <input type="submit" value="Submit">
-            </form>
+        <div id="postForm">
+            <input type="text" id="title" placeholder="Enter title">
+            <input type="text" id="author" placeholder="Enter author name">
+            <input type="text" id="date" placeholder="Enter date">
+            <textarea id="content" placeholder="Enter content"></textarea>
+            <button onclick="createPost()">Submit</button>
         </div>
 
         <div class="timeline">
@@ -37,12 +34,7 @@
                   <div class="post-interactions">
                     <button>
                         like
-                        <ul>
-                            <li><img src="/Assets/like.png"></li>
-                            <li><img src="/Assets/heart.png"></li>
-                            <li><img src="/Assets/wow.png"></li>
-                            <li><img src="/Assets/laugh.png"></li>
-                        </ul>
+
                     </button>
                     <button>private</button>
                     <button>public</button>
@@ -57,12 +49,7 @@
                   <div class="post-interactions">
                     <button>
                         like
-                        <ul>
-                            <li><img src="/Assets/like.png"></li>
-                            <li><img src="/Assets/heart.png"></li>
-                            <li><img src="/Assets/wow.png"></li>
-                            <li><img src="/Assets/laugh.png"></li>
-                        </ul>
+
                     </button>
                     <button>private</button>
                     <button>public</button>
@@ -77,12 +64,7 @@
                   <div class="post-interactions">
                     <button>
                         like
-                        <ul>
-                            <li><img src="/Assets/like.png"></li>
-                            <li><img src="/Assets/heart.png"></li>
-                            <li><img src="/Assets/wow.png"></li>
-                            <li><img src="/Assets/laugh.png"></li>
-                        </ul>
+
                     </button>
                     <button>private</button>
                     <button>public</button>
@@ -97,12 +79,7 @@
                   <div class="post-interactions">
                     <button>
                         like
-                        <ul>
-                            <li><img src="/Assets/like.png"></li>
-                            <li><img src="/Assets/heart.png"></li>
-                            <li><img src="/Assets/wow.png"></li>
-                            <li><img src="/Assets/laugh.png"></li>
-                        </ul>
+
                     </button>
                     <button>private</button>
                     <button>public</button>
@@ -117,21 +94,12 @@
                   <div class="post-interactions">
                     <button>
                         like
-                        <ul>
-                            <li><img src="/Assets/like.png"></li>
-                            <li><img src="/Assets/heart.png"></li>
-                            <li><img src="/Assets/wow.png"></li>
-                            <li><img src="/Assets/laugh.png"></li>
-                        </ul>
+
                     </button>
                     <button>private</button>
                     <button>public</button>
                 </div>
-                <div style="text-align:center;margin:20px;">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -139,12 +107,12 @@
           <footer class = "footer">
             <a href="./Home.html">
                 <button class ="ButtonFooter">
-                    <img src="/Assets/Home-1.png" alt="Home icon">
+                    <img src="/Assets/Home-nonactive.png" alt="Home icon">
                 </button>
             </a>
             <a href="/Pages/diary.html">
                 <button class ="ButtonFooter">
-                    <img src="/Assets/Diary.png" alt="Diary icon">
+                    <img src="/Assets/Diary_active.png" alt="Diary icon">
                 </button>
             </a>
                 
@@ -162,6 +130,6 @@
                 </button>
             </a>
         </footer>
-        <script src="/js/main.js"></script>
+        <script src="/js/script.js"></script>
     </body>
 </html>

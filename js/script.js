@@ -31,7 +31,7 @@ TakeCigs.addEventListener("click", function(){
     CigsTimer = setTimeout(function(){ console.log("Cig timer is done")},8000)
     if(CigsTimer){
       console.log("the Cigstimer is running")
-      if(CigsLeft == 5){
+      if(CigsLeft == 5 && CigsTimer){
 
         ShowWarning();
         sessionStorage.setItem("IsWarningMessage", "true")
